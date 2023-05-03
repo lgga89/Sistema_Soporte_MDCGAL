@@ -6,16 +6,15 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
 .main {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  min-height: 100vh;
   align-items: center;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
+  justify-content: center;
+  max-width: 900px;
+  width: 100%;
 }
 
 body {
