@@ -1,5 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  color: #e42424;
+  line-height: 28px;
+}
+
+.select2-container {
+  .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 38px;
+    user-select: none;
+    -webkit-user-select: none;
+   
+  }
+
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -73,12 +92,14 @@ form {
       font-weight: 500;
       color: $color_title__sub-Secundary;
     }
-    .basic-single{
-
-      
-    }
+    
   }
 }
+
+
+
+
+
 
 input,
 select {
@@ -151,4 +172,39 @@ form .backBtn i {
   form .fields .input-field {
     width: 100%;
   }
+}
+
+@media (min-width:350px){
+
+  body{
+    display: flex;
+    flex-direction: column;
+  
+    .logo{ 
+      text-align: center;
+      
+    
+      img{
+     width: 80%;
+      }
+    }
+  }
+  
+  
+}
+
+@media (min-width:662px){
+
+  body{
+    display: flex;
+    flex-direction: column;
+      .logo{ 
+      text-align: center;
+        img{
+     width:600px ;
+      }
+    }
+  }
+  
+  
 }
