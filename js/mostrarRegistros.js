@@ -70,4 +70,6 @@ function llenarTabla() {
     fila.appendChild(celdaFecha);
     tbody.appendChild(fila);
   }
+ 
 }
+llenarTabla();
