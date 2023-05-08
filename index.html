@@ -18,27 +18,33 @@
 </head>
 
 <body>
-    <div class="logo">
-        <img src="./img/encabezado_001.png" alt="logo de la municipalidad MDGAL">
-    </div>
+
+    <nav class="logo">
+        <img src="./img/encabezado_001.png" alt="LOGO MUNI">
+    </nav>
+
     <div class="container">
         <header>SOLICITUD DE ATENCION AL USUARIO - SOPORTE TECNICO</header>
-        <form action="#">
+        <form action="" method="">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">DATOS PERSONALES</span>
                     <div class="fields">
                         <div class="input-field">
-                            <label>NOMBRES DEL ENCARGADO DE TU AREA</label>
-                            <input type="text" placeholder="Nombres y apellidos del jefe" required>
+                            <label for="txtid">ID</label>
+                            <input id="id" type="text" placeholder="id">
                         </div>
                         <div class="input-field">
-                            <label>DNI</label>
-                            <input type="text" placeholder="Ingrese DNI" required size="8" maxlength="8">
+                            <label for="txtEncar">NOMBRES DEL ENCARGADO DE TU AREA</label>
+                            <input id="nombreEncargado" type="text" placeholder="Nombres y apellidos del jefe" required>
                         </div>
                         <div class="input-field">
-                            <label>SEDE</label>
-                            <select required>
+                            <label for="txtDni">DNI</label>
+                            <input id="dni" type="text" placeholder="Ingrese DNI" required size="8" maxlength="8">
+                        </div>
+                        <div class="input-field">
+                            <label for="txtSede">SEDE</label>
+                            <select required id="sede">
                                 <option disabled selected>Seleccione la Sede</option>
                                 <option>Sede Central</option>
                                 <option>Sede GIO</option>
@@ -48,17 +54,17 @@
                             </select>
                         </div>
                         <div class="input-field">
-                            <label>CARGO</label>
-                            <select required>
+                            <label for="txtCargo">CARGO</label>
+                            <select required id="cargo">
                                 <option disabled selected>CARGO</option>
                                 <option>GERENTE</option>
                                 <option>SUB GERENTE</option>
                             </select>
                         </div>
                         <div class="input-field">
-                            <label>OFICINA</label>
-                            <select required class="basic-single">
-                                <option selected>Seleccione la Oficina</option>
+                            <label for="txtOficina">OFICINA</label>
+                            <select id="oficina" required class="basic-single">
+                                <option required selected>Seleccione la Oficina</option>
                                 <option>ALCALDIA</option>
                                 <option>CONSEJO MUNICIPAL</option>
                                 <option>GERENCIA DE SECRETARIA GENERAL E IMAGEN INSTITUCIONAL</option>
@@ -84,8 +90,8 @@
                             </select>
                         </div>
                         <div class="input-field">
-                            <label>SOLICITANTE</label>
-                            <input type="text" placeholder="NOMBRE DEL SOLICITANTE" required>
+                            <label for="txtSolicitante">SOLICITANTE</label>
+                            <input id="solicitante" type="text" placeholder="NOMBRE DEL SOLICITANTE" required>
                         </div>
                     </div>
                 </div>
@@ -93,8 +99,8 @@
                     <span class="title">DESCRIPCION DEL PROBLEMA</span>
                     <div class="fields">
                         <div class="input-field">
-                            <label>CATEGORIA</label>
-                            <select required>
+                            <label for="txtCategoria">CATEGORIA</label>
+                            <select id="categoria" required>
                                 <option disabled selected>Seleccione el problema</option>
                                 <option>IMPRESORA</option>
                                 <option>LA COMPUTADORA</option>
@@ -105,30 +111,54 @@
                             </select>
                         </div>
                         <div class="input-field">
-                            <label>CODIGO PATRIMONIAL</label>
-                            <input type="text" placeholder="Ingrese Codigo del equipo" required size="12" maxlength="12"
-                                required>
+                            <label for="txtCodigo">CODIGO PATRIMONIAL</label>
+                            <input id="codPatri" type="text" placeholder="Ingrese Codigo del equipo" required size="12"
+                                maxlength="12" required>
                         </div>
                         <div class="input-field">
-                            <label>PROBLEMATICA</label>
-                            <input type="text" placeholder="Describa brevemente el problema" required>
+                            <label for="txtProblematica">PROBLEMATICA</label>
+                            <input id="problematica" type="text" placeholder="Describa brevemente el problema" required>
                         </div>
                         <div class="input-field">
-                            <label>FECHA DEL SERVICIO</label>
-                            <input type="date" placeholder="Enter your issued date" required>
+                            <label for="txtFecha">FECHA DEL SERVICIO</label>
+                            <input id="fecha" type="date" placeholder="Enter your issued date" required>
                         </div>
                     </div>
-                    <button class="nextBtn">
-                        <span class="btnText">Aceptar</span>
+                    <button class="nextBtn" id="btnRegistrar">
+                        <span class="btnText">Registra</span>
                         <i class="uil uil-navigator"></i>
                     </button>
                 </div>
             </div>
-
-
-
         </form>
     </div>
+
+    <form action="#">
+        <table id="registro">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ENCARGADO</th>
+                    <th>DNI</th>
+                    <th>SEDE</th>
+                    <th>CARGO</th>
+                    <th>OFICINA</th>
+                    <th>SOLICITANTE</th>
+                    <th>CODIGO</th>
+                    <th>CATEGORIA</th>
+                    <th>PROBLEMATICA</th>
+                    <th>FECHA </th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </form>
+
+    <script src="./js/registrar.js"></script>
+    <script src="./js/mostrarRegistros.js"></script>
 
     <script>
         $(document).ready(function () {
