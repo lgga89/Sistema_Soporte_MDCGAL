@@ -8,36 +8,49 @@
     <link rel="stylesheet" href="css/main.css">
     <title>Información MDCGAL </title>
     <link rel="icon" type="image/png" href="//www.munialbarracin.gob.pe/CDN/svg_mdcgal/favicon/favicon.png">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+
 
 </head>
 
-<body>
-    <div>
-        <header> REGISTRO - SOPORTE TECNICO MDCGAL</header>
+<body class="cuerpo">
+    <nav class="logo_registro">
+        <img class="logoForm_dos" src="./img/encabezado_001.png" alt="LOGO MUNI">
+    </nav>
+    <h1 class="title_registro"> REGISTRO - SOPORTE TECNICO MDCGAL</h1>
 
+    <div>
         <table id="registro" class="customers">
             <thead>
                 <tr>
                     <th>ID</th>
-                    <th class="ofi2">ENCARGADO</th>
-                    <th class="ofi">DNI</th>
+                    <th>ENCARGADO</th>
+                    <th>DNI</th>
                     <th>SEDE</th>
-                    <th class="ofi">CARGO</th>
+                    <th>CARGO</th>
                     <th>OFICINA</th>
-                    <th class="ofi2">SOLICITANTE</th>
-                    <th class="ofi">CODIGO</th>
+                    <th>SOLICITANTE</th>
+                    <th>CODIGO</th>
                     <th>CATEGORIA</th>
                     <th>PROBLEMATICA</th>
                     <th>FECHA </th>
                 </tr>
             </thead>
             <tbody>
+
             </tbody>
         </table>
-
     </div>
-    <script src="./js/registrar.js"></script>
+
     <script src="./js/mostrarRegistros.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src=""></script>
+    <script src="./js/paginacion.js"></script>
 </body>
+<footer class="page_cake">
+    <p>©lgga 2023</p>
+</footer>
 
 </html>

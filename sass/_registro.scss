@@ -1,61 +1,108 @@
+html{
+  min-height: 100%;
+      position: relative;
+}
+.logo_registro{
+  background-color:$color_fondo_Logo ;
+  width: 100%;
+}
+
+.title_registro{
+  color:$color_letra ;
+  font-size: 30px;
+}
+.cuerpo{
+  background-color: $color_fondo__formulario_soporte;
+}
+
 .customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-spacing: 0;
     width: 100%;
-
     border-radius: 6px 6px 0 0;
     background-color: #fff;
+    td{
+       padding: 8px;
+      text-align: center;
+      th {
+      padding: 8px;
+      text-align: center; 
+    }
+    }
   }
-  
-  .customers td,
-  .customers th {
-    padding: 8px;
-    text-align: center;
-  }
-  
- .customers tr:nth-child(even) {
+
+.page_cake{    
+  background-color:$color_fondo_Logo ;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  color: white;
+  p{
+    color:white ;
+    height: 20%;
+   } 
+}
+
+
+tr:nth-child(even) {
     background-color: #f2f2f2;
   }
-  
- .customers tr:hover {
+
+ tr:hover {
     background: #e8f2fd;
     transition: all 0.1s ease-in-out;
   }
-  
- .customers th:first-child {
+th:first-child {
     border-radius: 6px 0 0 0;
   }
   
- .customers th:last-child {
+ th:last-child {
     border-radius: 0 6px 0 0;
   }
-  
- .customers th:only-child {
+
+ th:only-child {
     border-radius: 6px 6px 0 0;
   }
-  
  .customers th {
-    background-color: #00889f;
+    background-color: $color_emcabezadoTabla;
     color: white;
   }
-
-@media (max-width:1024px) {
-    .ofi{
-            display:none;
-    }
-
+.dataTables_filter{
+  color: white;
 }
 
-@media (max-width:640px) {
-    .ofi2{
-            display:none;
-    }
 
+
+@media (min-width: 350px) {
+  .cuerpo {
+    display: flex;
+    flex-direction: column;
+    .logo_registro {
+      text-align: center;
+      .logoForm_dos {
+        width: 80%;
+      }
+    }
+  }
 }
 
-@media (max-width:500px) {
-    .ofi3{
-            display:none;
+@media (min-width: 662px) {
+  .cuerpo {
+    display: flex;
+    flex-direction: column;
+    .logo_registro {
+      text-align: center;
+      .logoForm_dos {
+        width: 600px;
+      }
     }
-
+  }
 }
+
+// las celdas de colos gris
+tr:nth-child(2n + 2) td {
+  background-color: $color_fondo;
+}
+//- tablas responsive-//
