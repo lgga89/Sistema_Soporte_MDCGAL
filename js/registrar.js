@@ -1,21 +1,3 @@
-/*function ejecutar() {
-  let nombrEncar = document.getElementById("nombreEncargado").value;
-  let dni = document.getElementById("dni").value;
-  let sede = document.getElementById("sede").value;
-  let cargo = document.getElementById("cargo").value;
-  let oficina = document.getElementById("oficina").value;
-
-  let solicitante = document.getElementById("solicitante").value;
-  let codigo = document.getElementById("codPatri").value;
-  let categoria = document.getElementById("categoria").value;
-  let problematica = document.getElementById("problematica").value;
-  let fecha = document.getElementById("fecha").value;
-  console.log(
-    `${nombrEncar} ${dni} ${sede} ${cargo} ${oficina} ${solicitante}
-    ${codigo} ${categoria} ${problematica} ${fecha} `
-  );
-}
-*/
 
 let aid = [],
   aencar = [],
