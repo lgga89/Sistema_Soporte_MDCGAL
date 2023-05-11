@@ -25,7 +25,7 @@
 
     <div class="container">
         <header>SOLICITUD DE ATENCION AL USUARIO - SOPORTE TECNICO</header>
-        <form action="" method="">
+        <form action="" method="" id="fomrulario">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">DATOS PERSONALES</span>
@@ -36,15 +36,15 @@
                         </div>
                         <div class="input-field">
                             <label for="txtEncar">NOMBRES DEL ENCARGADO DE TU AREA</label>
-                            <input id="nombreEncargado" type="text" placeholder="Nombres y apellidos del jefe" required>
+                            <input id="nombreEncargado" type="text" placeholder="Nombres y apellidos del jefe">
                         </div>
                         <div class="input-field">
                             <label for="txtDni">DNI</label>
-                            <input id="dni" type="text" placeholder="Ingrese DNI" required size="8" maxlength="8">
+                            <input id="dni" type="text" placeholder="Ingrese DNI" size="8" maxlength="8">
                         </div>
                         <div class="input-field">
-                            <label required for="txtSede">SEDE</label>
-                            <select required id="sede">
+                            <label for="txtSede">SEDE</label>
+                            <select id="sede">
                                 <option disabled selected>Seleccione la Sede</option>
                                 <option>Sede Central</option>
                                 <option>Sede GIO</option>
@@ -55,7 +55,7 @@
                         </div>
                         <div class="input-field">
                             <label for="txtCargo">CARGO</label>
-                            <select required id="cargo">
+                            <select id="cargo">
                                 <option disabled selected>CARGO</option>
                                 <option>GERENTE</option>
                                 <option>SUB GERENTE</option>
@@ -63,8 +63,8 @@
                         </div>
                         <div class="input-field">
                             <label for="txtOficina">OFICINA</label>
-                            <select id="oficina" required class="basic-single">
-                                <option required selected>Seleccione la Oficina</option>
+                            <select id="oficina" class="basic-single">
+                                <option selected>Seleccione la Oficina</option>
                                 <option>ALCALDIA</option>
                                 <option>CONSEJO MUNICIPAL</option>
                                 <option>GERENCIA DE SECRETARIA GENERAL E IMAGEN INSTITUCIONAL</option>
@@ -91,7 +91,7 @@
                         </div>
                         <div class="input-field">
                             <label for="txtSolicitante">SOLICITANTE</label>
-                            <input id="solicitante" type="text" placeholder="NOMBRE DEL SOLICITANTE" required>
+                            <input id="solicitante" type="text" placeholder="NOMBRE DEL SOLICITANTE">
                         </div>
                     </div>
                 </div>
@@ -101,7 +101,7 @@
                         <div class="input-field">
                             <label for="txtCategoria">CATEGORIA</label>
                             <select id="categoria" required>
-                                <option disabled selected>Seleccione el problema</option>
+                                <option selected>Seleccione el problema</option>
                                 <option>IMPRESORA</option>
                                 <option>LA COMPUTADORA</option>
                                 <option>INTERNET</option>
@@ -112,30 +112,31 @@
                         </div>
                         <div class="input-field">
                             <label for="txtCodigo">CODIGO PATRIMONIAL</label>
-                            <input id="codPatri" type="text" placeholder="Ingrese Codigo del equipo" required size="12"
-                                maxlength="12" required>
+                            <input id="codPatri" type="text" placeholder="Ingrese Codigo del equipo" size="12"
+                                maxlength="12">
                         </div>
                         <div class="input-field">
                             <label for="txtProblematica">PROBLEMATICA</label>
-                            <input id="problematica" type="text" placeholder="Describa brevemente el problema" required>
+                            <input id="problematica" type="text" placeholder="Describa brevemente el problema">
                         </div>
                         <div class="input-field">
                             <label for="txtFecha">FECHA DEL SERVICIO</label>
-                            <input id="fecha" type="date" placeholder="Enter your issued date" required>
+                            <input id="fecha" type="date" placeholder="Enter your issued date">
                         </div>
                     </div>
-                    <button class="nextBtn" id="btnRegistrar">
+                    <button type="submit" class="nextBtn" id="btnRegistrar" onclick="AddData()">
                         <span class="btnText">Registra</span>
                         <i class="uil uil-navigator"></i>
                     </button>
                 </div>
             </div>
         </form>
+        <div id="error"></div>
     </div>
 
 
 
-
+    <script src="./js/validar.js"></script>
     <script src="./js/registrar.js"></script>
     <script src="./js/mostrarRegistros.js"></script>
 

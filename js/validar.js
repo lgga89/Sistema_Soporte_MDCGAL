@@ -1,4 +1,13 @@
-function validarForm(){
+
+
+
+
+
+
+
+
+
+/*function validarForm(){
 
 
 let nomEncar = document.getElementById("nombreEncargado").value;
@@ -11,8 +20,8 @@ let catergoria = document.getElementById("catergoria").value;
 let codPatri = document.getElementById("codPatri").value;
 let problematica = document.getElementById("problematica").value;
 let fecha = document.getElementById("fecha").value;
-
-
+let error = document.getElementById("error").value;
+error.style.color = "red";
 
 
 if(nomEncar ==""){
@@ -57,4 +66,42 @@ return false;
 }
 return
 }
+validarForm()
 
+
+
+/*
+function ReadDatos(){
+    let listaDatos;
+    if(localStorage.getItem("listaDatos")==null){
+        listaDatos = [];}
+
+        else{
+            listaDatos = JSON.parse(localStorage.getItem("listaDatos"));
+        }
+let html = "";
+listaDatos.forEach(function(element, index){
+
+
+    html +="<tr>";
+    html += "<td>"+ element.nomEncar + "</td>";
+    html += "<td>"+ element.dni + "</td>";
+    html += "<td>"+ element.sede + "</td>";
+    html += "<td>"+ element.cargo + "</td>";
+    html += "<td>"+ element.oficina + "</td>";
+    html += "<td>"+ element.catergoria+ "</td>";
+    html += "<td>"+ element.solicitante  + "</td>";
+    html += "<td>"+ element.problematica  + "</td>";
+    html += "<td>"+ element.fecha + "</td>";
+    html += '<td><button onclick="deleteData('+ index +')" class ="nextBtn">Eliminar Dato</button>
+    <button onclick="editData('+ index +')" class ="nextBtn">Eliminar Dato</button>';
+html +="</tr>";
+
+
+});
+
+    }
+
+
+
+*/
