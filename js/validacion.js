@@ -1,3 +1,4 @@
+
 const fomrulario = document.getElementById("fomrulario");
 const id = document.getElementById("id");
 const nombreEncargado = document.getElementById("nombreEncargado");
@@ -10,6 +11,106 @@ const categoria = document.getElementById("categoria");
 const codPatri = document.getElementById("codPatri");
 const problematica = document.getElementById("problematica");
 const fecha = document.getElementById("fecha");
+
+
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+
+    validateInputs();
+});
+
+const setError = (element, message) => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = message;
+    inputControl.classList.add('error');
+    inputControl.classList.remove('success')
+}
+
+const setSuccess = element => {
+    const inputControl = element.parentElement;
+    const errorDisplay = inputControl.querySelector('.error');
+
+    errorDisplay.innerText = '';
+    inputControl.classList.add('success');
+    inputControl.classList.remove('error');
+};
+
+const isDni = dni => {
+    const re = /^.{1,8}$/;
+    return re.test(String(dni).toLowerCase());
+}
+const iscodPatri = dni => {
+  const re = /^.{1,12}$/;
+  return re.test(String(codPatri).toLowerCase());
+}
+
+/*
+function isDni(dni) {
+  return /^.{1,8}$/.test(dni);
+}
+function iscodPatri(codPatri) {
+  return /^.{1,12}$/.test(codPatri);
+}
+
+*/
+
+
+const validateInputs = () => {
+    const usernameValue = username.value.trim();
+    const emailValue = email.value.trim();
+    const passwordValue = password.value.trim();
+    const password2Value = password2.value.trim();
+
+
+
+
+
+
+    if(usernameValue === '') {
+        setError(username, 'Username is required');
+    } else {
+        setSuccess(username);
+    }
+
+    if(emailValue === '') {
+        setError(email, 'Email is required');
+    } else if (!isValidEmail(emailValue)) {
+        setError(email, 'Provide a valid email address');
+    } else {
+        setSuccess(email);
+    }
+
+    if(passwordValue === '') {
+        setError(password, 'Password is required');
+    } else if (passwordValue.length < 8 ) {
+        setError(password, 'Password must be at least 8 character.')
+    } else {
+        setSuccess(password);
+    }
+
+    if(password2Value === '') {
+        setError(password2, 'Please confirm your password');
+    } else if (password2Value !== passwordValue) {
+        setError(password2, "Passwords doesn't match");
+    } else {
+        setSuccess(password2);
+    }
+
+};
+
+
+
+
+
+
+
+
+
+
+
 
 if (nombreEncargadoValue === "") {
   setErrorFor(nombreEncargado, "Password cannot be blank");
