@@ -12,9 +12,12 @@
     <link href="https://select2.github.io/select2-bootstrap-theme/css/select2-bootstrap.css" rel="stylesheet" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
         integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
 </head>
 
 <body>
@@ -25,7 +28,8 @@
 
     <div class="container">
         <header>SOLICITUD DE ATENCION AL USUARIO - SOPORTE TECNICO</header>
-        <form action="" id="fomrulario">
+
+        <form action="" id="form">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">DATOS PERSONALES</span>
@@ -33,29 +37,29 @@
                         <div class="input-field inputControl">
                             <label for="txtid">ID</label>
                             <input id="id" type="text" placeholder="id">
-                            <div class="error"></div>
+
                         </div>
                         <div class="input-field inputControl">
                             <label for="txtEncar">NOMBRES DEL ENCARGADO DE TU AREA</label>
                             <input id="nombreEncargado" type="text" placeholder="Nombres y apellidos del jefe">
-                            <div class="error"></div>
+
                         </div>
                         <div class="input-field inputControl">
                             <label for="txtDni">DNI</label>
                             <input id="dni" type="text" placeholder="Ingrese DNI" size="8" maxlength="8">
-                            <div class="error"></div>
+
                         </div>
                         <div class="input-field inputControl">
                             <label for="txtSede">SEDE</label>
                             <select id="sede">
-                                <option disabled selected>Seleccione la Sede</option>
+                                <option selected>Seleccione la Sede</option>
                                 <option>Sede Central</option>
                                 <option>Sede GIO</option>
                                 <option>Sede Palacio de la Juventud</option>
                                 <option>Sede SIAM</option>
                                 <option>Sede DEMUNA</option>
                             </select>
-                            <div class="error"></div>
+
                         </div>
                         <div class="input-field inputControl">
                             <label for="txtCargo">CARGO</label>
@@ -64,7 +68,7 @@
                                 <option>GERENTE</option>
                                 <option>SUB GERENTE</option>
                             </select>
-                            <div class="error"></div>
+
                         </div>
                         <div class="input-field inputControl">
                             <label for="txtOficina">OFICINA</label>
@@ -93,12 +97,12 @@
                                 <option>GERENCIA DE ADMINISTRACION TRIBUTARIA</option>
                                 <option>GERENCIA DE ASESORIA JURIDICA</option>
                             </select>
-                            <div class="error"></div>
+
                         </div>
                         <div class="input-field inputControl">
                             <label for="txtSolicitante">SOLICITANTE</label>
                             <input id="solicitante" type="text" placeholder="NOMBRE DEL SOLICITANTE">
-                            <div class="error"></div>
+
                         </div>
                     </div>
                 </div>
@@ -116,40 +120,38 @@
                                 <option>SISTRAMITE</option>
                                 <option>SIGAL</option>
                             </select>
-                            <div class="error"></div>
+
                         </div>
                         <div class="input-field inputControl">
                             <label for="txtCodigo">CODIGO PATRIMONIAL</label>
                             <input id="codPatri" type="text" placeholder="Ingrese Codigo del equipo" size="12"
                                 maxlength="12">
-                            <div class="error"></div>
+
                         </div>
                         <div class="input-field inputControl">
                             <label for="txtProblematica">PROBLEMATICA</label>
                             <input id="problematica" type="text" placeholder="Describa brevemente el problema">
-                            <div class="error"></div>
+
                         </div>
                         <div class="input-field inputControl">
                             <label for="txtFecha">FECHA DEL SERVICIO</label>
                             <input id="fecha" type="date" placeholder="Enter your issued date">
-                            <div class="error"></div>
+
                         </div>
 
                     </div>
-                    <button type="submit" class="nextBtn" id="btnRegistrar" onclick="AddData()">
+                    <button type="submit" class="nextBtn">
                         <span class="btnText">submit</span>
                         <i class="uil uil-navigator"></i>
-
                     </button>
                 </div>
             </div>
         </form>
-        <div id="error"></div>
+
     </div>
 
 
 
-    <script src="./js/validacion.js"></script>
     <script src="./js/registrar.js"></script>
     <script src="./js/mostrarRegistros.js"></script>
 
