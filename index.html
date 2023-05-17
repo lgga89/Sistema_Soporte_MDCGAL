@@ -15,6 +15,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
         integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+
+
 </head>
 
 <body>
@@ -25,35 +30,31 @@
 
     <div class="container">
         <header>SOLICITUD DE ATENCION AL USUARIO - SOPORTE TECNICO</header>
-        <form action="" id="fomrulario">
+        <form action="/" id="formu">
             <div class="form first">
                 <div class="details personal">
                     <span class="title">DATOS PERSONALES</span>
                     <div class="fields">
-                        <div class="input-field form-control">
-                            <label for="txtid">ID</label>
-                            <input id="id" type="text" placeholder="id">
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error message</small>
+
+                        <div class="input-field  input-control">
+                            <label for="id">ID</label>
+                            <input id="id" name="id" type="text" placeholder="id">
+                            <div class="error"></div>
                         </div>
-                        <div class="input-field form-control">
-                            <label for="txtEncar">NOMBRES DEL ENCARGADO DE TU AREA</label>
-                            <input id="nombreEncargado" type="text" placeholder="Nombres y apellidos del jefe">
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error message</small>
+                        <div class="input-field input-control">
+                            <label for="nombreEncargado">NOMBRES DEL ENCARGADO DE TU AREA</label>
+                            <input id="nombreEncargado" name="nombreEncargado" type="text"
+                                placeholder="Nombres y apellidos del jefe">
+                            <div class="error"></div>
                         </div>
-                        <div class="input-field form-control">
-                            <label for="txtDni">DNI</label>
-                            <input id="dni" type="text" placeholder="Ingrese DNI" size="8" maxlength="8">
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error message</small>
+                        <div class="input-field input-control">
+                            <label for="dni">DNI</label>
+                            <input id="dni" type="text" name="dni" placeholder="Ingrese DNI">
+                            <div class="error"></div>
                         </div>
-                        <div class="input-field form-control">
-                            <label for="txtSede">SEDE</label>
-                            <select id="sede">
+                        <div class="input-field input-control">
+                            <label for="sede">SEDE</label>
+                            <select id="sede" name="sede">
                                 <option disabled selected>Seleccione la Sede</option>
                                 <option>Sede Central</option>
                                 <option>Sede GIO</option>
@@ -61,24 +62,20 @@
                                 <option>Sede SIAM</option>
                                 <option>Sede DEMUNA</option>
                             </select>
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error message</small>
+                            <div class="error"></div>
                         </div>
-                        <div class="input-field form-control">
-                            <label for="txtCargo">CARGO</label>
-                            <select id="cargo">
+                        <div class="input-field input-control">
+                            <label for="cargo">CARGO</label>
+                            <select id="cargo" name="cargo">
                                 <option disabled selected>CARGO</option>
                                 <option>GERENTE</option>
                                 <option>SUB GERENTE</option>
                             </select>
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error message</small>
+                            <div class="error"></div>
                         </div>
-                        <div class="input-field form-control">
-                            <label for="txtOficina">OFICINA</label>
-                            <select id="oficina" class="basic-single">
+                        <div class="input-field input-control">
+                            <label for="oficina">OFICINA</label>
+                            <select id="oficina" class="basic-single" name="oficina">
                                 <option selected>Seleccione la Oficina</option>
                                 <option>ALCALDIA</option>
                                 <option>CONSEJO MUNICIPAL</option>
@@ -103,25 +100,21 @@
                                 <option>GERENCIA DE ADMINISTRACION TRIBUTARIA</option>
                                 <option>GERENCIA DE ASESORIA JURIDICA</option>
                             </select>
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error message</small>
+                            <div class="error"></div>
                         </div>
-                        <div class="input-field form-control">
-                            <label for="txtSolicitante">SOLICITANTE</label>
-                            <input id="solicitante" type="text" placeholder="NOMBRE DEL SOLICITANTE">
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error message</small>
+                        <div class="input-field input-control">
+                            <label for="solicitante">SOLICITANTE</label>
+                            <input id="solicitante" name="solicitante" type="text" placeholder="NOMBRE DEL SOLICITANTE">
+                            <div class="error"></div>
                         </div>
                     </div>
                 </div>
                 <div class="details ">
                     <span class="title">DESCRIPCION DEL PROBLEMA</span>
                     <div class="fields">
-                        <div class="input-field form-control">
-                            <label for="txtCategoria">CATEGORIA</label>
-                            <select id="categoria">
+                        <div class="input-field input-control">
+                            <label for="categoria">CATEGORIA</label>
+                            <select required id="categoria" name="categoria">
                                 <option selected>Seleccione el problema</option>
                                 <option>IMPRESORA</option>
                                 <option>LA COMPUTADORA</option>
@@ -130,43 +123,33 @@
                                 <option>SISTRAMITE</option>
                                 <option>SIGAL</option>
                             </select>
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error message</small>
+                            <div class="error"></div>
                         </div>
-                        <div class="input-field form-control">
-                            <label for="txtCodigo">CODIGO PATRIMONIAL</label>
-                            <input id="codPatri" type="text" placeholder="Ingrese Codigo del equipo" size="12"
-                                maxlength="12">
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error message</small>
+                        <div class="input-field input-control">
+                            <label for="codPatri">CODIGO PATRIMONIAL</label>
+                            <input id="codPatri" name="codPatri" type="text" placeholder="Ingrese Codigo del equipo">
+                            <div class="error"></div>
                         </div>
-                        <div class="input-field form-control">
-                            <label for="txtProblematica">PROBLEMATICA</label>
-                            <input id="problematica" type="text" placeholder="Describa brevemente el problema">
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error message</small>
+                        <div class="input-field input-control">
+                            <label for="problematica">PROBLEMATICA</label>
+                            <input id="problematica" name="problematica" type="text"
+                                placeholder="Describa brevemente el problema">
+                            <div class="error"></div>
                         </div>
-                        <div class="input-field form-control">
-                            <label for="txtFecha">FECHA DEL SERVICIO</label>
-                            <input id="fecha" type="date" placeholder="Enter your issued date">
-                            <i class="fas fa-check-circle"></i>
-                            <i class="fas fa-exclamation-circle"></i>
-                            <small>Error message</small>
+                        <div class="input-field input-control">
+                            <label for="fecha">FECHA DEL SERVICIO</label>
+                            <input id="fecha" name="fecha" type="date" placeholder="Enter your issued date">
+                            <div class="error"></div>
                         </div>
-
                     </div>
-                    <button type="submit" class="nextBtn" id="btnRegistrar" onclick="AddData()">
+                    <button type="submit" class="nextBtn" id="btnRegistrar">
                         <span class="btnText">submit</span>
                         <i class="uil uil-navigator"></i>
-
                     </button>
                 </div>
             </div>
         </form>
-        <div id="error"></div>
+
     </div>
 
 

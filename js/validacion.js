@@ -1,4 +1,4 @@
-const fomrulario = document.getElementById("fomrulario");
+const formu = document.getElementById("formu");
 const id = document.getElementById("id");
 const nombreEncargado = document.getElementById("nombreEncargado");
 const dni = document.getElementById("dni");
@@ -11,91 +11,109 @@ const codPatri = document.getElementById("codPatri");
 const problematica = document.getElementById("problematica");
 const fecha = document.getElementById("fecha");
 
-if (nombreEncargadoValue === "") {
-  setErrorFor(nombreEncargado, "Password cannot be blank");
-} else {
-  setSuccessFor(nombreEncargado);
-}
-
-if (dniValue === "") {
-  setErrorFor(dni, "Password cannot be blank");
-} else {
-  setSuccessFor(dni);
-}
-
-if (sedeValue === "") {
-  setErrorFor(sede, "Password cannot be blank");
-} else {
-  setSuccessFor(sede);
-}
-
-if (cargoValue === "") {
-  setErrorFor(cargo, "Password cannot be blank");
-} else {
-  setSuccessFor(cargo);
-}
-
-if (oficinaValue === "") {
-  setErrorFor(oficina, "Password cannot be blank");
-} else {
-  setSuccessFor(oficina);
-}
-if (solicitanteValue === "") {
-  setErrorFor(solicitante, "Password cannot be blank");
-} else {
-  setSuccessFor(solicitante);
-}
-if (categoriaValue === "") {
-  setErrorFor(categoria, "Password cannot be blank");
-} else {
-  setSuccessFor(categoria);
-}
-if (codPatriValue === "") {
-  setErrorFor(codPatri, "Password cannot be blank");
-} else {
-  setSuccessFor(codPatri);
-}
-if (problematicaValue === "") {
-  setErrorFor(problematica, "Password cannot be blank");
-} else {
-  setSuccessFor(problematica);
-}
-if (fechaValue === "") {
-  setErrorFor(fecha, "Password cannot be blank");
-} else {
-  setSuccessFor(fecha);
-}
-
-function setErrorFor(input, message) {
-  const formControl = input.parentElement;
-  const small = formControl.querySelector("small");
-  formControl.className = "form-control error";
-  small.innerText = message;
-}
-
-function setSuccessFor(input) {
-  const formControl = input.parentElement;
-  formControl.className = "form-control success";
-}
-
-function isDni(dni) {
-  return /^.{1,8}$/.test(dni);
-}
-function iscodPatri(codPatri) {
-  return /^.{1,12}$/.test(codPatri);
-}
-
-// SOCIAL PANEL JS
-const floating_btn = document.querySelector(".floating-btn");
-const close_btn = document.querySelector(".close-btn");
-const social_panel_container = document.querySelector(
-  ".social-panel-container"
-);
-
-floating_btn.addEventListener("click", () => {
-  social_panel_container.classList.toggle("visible");
+formu.addEventListener("submit", (e) => {
+  e.preventDefault();
+  validateInputs();
 });
 
-close_btn.addEventListener("click", () => {
-  social_panel_container.classList.remove("visible");
-});
+const setError = (element, message) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector(".error");
+
+  errorDisplay.innerText = message;
+  inputControl.classList.add("error");
+  inputControl.classList.remove("success");
+};
+
+const setSuccess = (element) => {
+  const inputControl = element.parentElement;
+  const errorDisplay = inputControl.querySelector(".error");
+
+  errorDisplay.innerText = "";
+  inputControl.classList.add("success");
+  inputControl.classList.remove("error");
+};
+/*
+const isValidDni = (dni) => {
+  const re =
+    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return re.test(String(dni).toLowerCase());
+};
+*/
+
+const validateInputs = () => {
+  const idValue = id.value.trim();
+  const nombreEncargadoValue = nombreEncargado.value.trim();
+  const dniValue = dni.value.trim();
+  const cargoValue = cargo.value.trim();
+  const oficinaValue = oficina.value.trim();
+  const solicitanteValue = solicitante.value.trim();
+  const categoriaValue = categoria.value.trim();
+  const sedeValue = codPatri.value.trim();
+  const codPatriValue = dni.value.trim();
+  const problematicaValue = problematica.value.trim();
+  const fechaValue = fecha.value.trim();
+
+  if (idValue === "") {
+    setError(id, "Username is required");
+  } else {
+    setSuccess(id);
+  }
+
+  if (nombreEncargadoValue === "") {
+    setError(nombreEncargado, "Username is required");
+  } else {
+    setSuccess(nombreEncargado);
+  }
+
+  if (dniValue === "") {
+    setError(dni, "Username is required");
+  } else {
+    setSuccess(dni);
+  }
+
+  if (cargoValue === "") {
+    setError(cargo, "Username is required");
+  } else {
+    setSuccess(cargo);
+  }
+
+  if (oficinaValue === "") {
+    setError(oficina, "Username is required");
+  } else {
+    setSuccess(oficina);
+  }
+
+  if (solicitanteValue === "") {
+    setError(solicitante, "Username is required");
+  } else {
+    setSuccess(solicitante);
+  }
+
+  if (categoriaValue === "") {
+    setError(categoria, "Username is required");
+  } else {
+    setSuccess(categoria);
+  }
+
+  if (sedeValue === "") {
+    setError(sede, "Username is required");
+  } else {
+    setSuccess(sede);
+  }
+  if (codPatriValue === "") {
+    setError(codPatri, "Username is required");
+  } else {
+    setSuccess(codPatri);
+  }
+  if (problematicaValue === "") {
+    setError(problematica, "Username is required");
+  } else {
+    setSuccess(problematica);
+  }
+  if (fechaValue === "") {
+    setError(fecha, "Username is required");
+  } else {
+    setSuccess(fecha);
+  }
+};
