@@ -63,5 +63,6 @@ function registrar() {
   localStorage.setItem("categoria_problema", JSON.stringify(acategoria));
   localStorage.setItem("problematica_problema", JSON.stringify(aproblematica));
   localStorage.setItem("fecha_servicio", JSON.stringify(afecha));
+
   llenarTabla();
 }

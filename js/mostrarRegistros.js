@@ -68,7 +68,7 @@ function llenarTabla() {
     fila.appendChild(celdaCategoria);
     fila.appendChild(celdaProblematica);
     fila.appendChild(celdaFecha);
+
     tbody.appendChild(fila);
   }
 }
-llenarTabla();
