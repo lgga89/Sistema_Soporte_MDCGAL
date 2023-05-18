@@ -8,7 +8,8 @@ let aid = [],
   acodigo = [],
   acategoria = [],
   aproblematica = [],
-  afecha = [];
+  afecha = [],
+  aestado = [];
 
 if (localStorage.getItem("id_encargado") != null) {
   aid = JSON.parse(localStorage.getItem("id_encargado"));
@@ -22,6 +23,7 @@ if (localStorage.getItem("id_encargado") != null) {
   acategoria = JSON.parse(localStorage.getItem("categoria_problema"));
   aproblematica = JSON.parse(localStorage.getItem("problematica_problema"));
   afecha = JSON.parse(localStorage.getItem("fecha_servicio"));
+  aestado = JSON.parse(localStorage.getItem("estado"));
 }
 
 let elementoBtnRegistrar = document.querySelector("#btnRegistrar");
@@ -38,7 +40,8 @@ function registrar() {
     scodigo = document.querySelector("#codPatri").value,
     scategoria = document.querySelector("#categoria").value,
     sproblematica = document.querySelector("#problematica").value,
-    sfecha = document.querySelector("#fecha").value;
+     sfecha = document.querySelector("#fecha").value,
+    sestado = document.querySelector("#estado").value;
 
   aid.push(sid);
   aencar.push(snombrEncar);
@@ -51,6 +54,7 @@ function registrar() {
   acategoria.push(scategoria);
   aproblematica.push(sproblematica);
   afecha.push(sfecha);
+  aestado.push(sestado);
 
   localStorage.setItem("id_encargado", JSON.stringify(aid));
   localStorage.setItem("nombre_encargado", JSON.stringify(aencar));
@@ -63,6 +67,7 @@ function registrar() {
   localStorage.setItem("categoria_problema", JSON.stringify(acategoria));
   localStorage.setItem("problematica_problema", JSON.stringify(aproblematica));
   localStorage.setItem("fecha_servicio", JSON.stringify(afecha));
+  localStorage.setItem("estado", JSON.stringify(aestado));
 
   llenarTabla();
 }

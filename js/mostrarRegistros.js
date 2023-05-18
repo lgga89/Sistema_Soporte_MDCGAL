@@ -15,7 +15,8 @@ function llenarTabla() {
     acodigo = JSON.parse(localStorage.getItem("codigo_patrimonial")),
     acategoria = JSON.parse(localStorage.getItem("categoria_problema")),
     aproblematica = JSON.parse(localStorage.getItem("problematica_problema")),
-    afecha = JSON.parse(localStorage.getItem("fecha_servicio"));
+    afecha = JSON.parse(localStorage.getItem("fecha_servicio")),
+    aestado = JSON.parse(localStorage.getItem("estado"));
 
   let nCantidad = aid.length;
   for (let i = 0; i < nCantidad; i++) {
@@ -31,7 +32,8 @@ function llenarTabla() {
       celdaCodigo = document.createElement("td"),
       celdaCategoria = document.createElement("td"),
       celdaProblematica = document.createElement("td"),
-      celdaFecha = document.createElement("td");
+      celdaFecha = document.createElement("td"),
+      celdaEstado = document.createElement("td");
 
     let nodoId = document.createTextNode(aid[i]),
       nodoEncar = document.createTextNode(aencar[i]),
@@ -43,7 +45,8 @@ function llenarTabla() {
       nodoCodigo = document.createTextNode(acodigo[i]),
       nodoCategoria = document.createTextNode(acategoria[i]),
       nodoProblematica = document.createTextNode(aproblematica[i]),
-      nodoFecha = document.createTextNode(afecha[i]);
+      nodoFecha = document.createTextNode(afecha[i]),
+      nodoEstado = document.createTextNode(aestado[i]);
 
     celdaId.appendChild(nodoId);
     celdaEncar.appendChild(nodoEncar);
@@ -55,7 +58,8 @@ function llenarTabla() {
     celdaCodigo.appendChild(nodoCodigo);
     celdaCategoria.appendChild(nodoCategoria);
     celdaProblematica.appendChild(nodoProblematica);
-    celdaFecha.appendChild(nodoFecha);
+    celdaFecha.appendChild(nodoFecha);    
+    celdaEstado.appendChild(nodoEstado);
 
     fila.appendChild(celdaId);
     fila.appendChild(celdaEncar);
@@ -68,7 +72,7 @@ function llenarTabla() {
     fila.appendChild(celdaCategoria);
     fila.appendChild(celdaProblematica);
     fila.appendChild(celdaFecha);
-
+    fila.appendChild(celdaEstado);
     tbody.appendChild(fila);
   }
 }

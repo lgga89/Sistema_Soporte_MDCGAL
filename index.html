@@ -8,31 +8,20 @@
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>ATENCION AL USUARIO - MDCGAL </title>
+    <link rel="icon" type="image/png" href="//www.munialbarracin.gob.pe/CDN/svg_mdcgal/favicon/favicon.png">
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <link href="https://select2.github.io/select2-bootstrap-theme/css/select2-bootstrap.css" rel="stylesheet" />
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"
         integrity="sha512-2ImtlRlf2VVmiGZsjm9bEyhjGW4dU7B6TNwh/hx/iSByxNENtj3WVE6o/9Lj4TJeVXPi4bnOIMXFIJJAeufa0A=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-
-
-
-
-
 </head>
 
 <body>
-
     <nav class="logo">
         <img src="./img/encabezado_001.png" alt="LOGO MUNI">
     </nav>
-
     <div class="container">
         <header>SOLICITUD DE ATENCION AL USUARIO - SOPORTE TECNICO</header>
         <form action="/" id="formu" autocomplete="off">
@@ -44,18 +33,18 @@
                         <div class="input-field  input-control">
                             <label for="id">ID</label>
                             <input required id="id" name="id" type="text" placeholder="id">
-
+                            <div class="error"></div>
                         </div>
                         <div class="input-field input-control">
                             <label for="nombreEncargado">NOMBRES DEL ENCARGADO DE TU AREA</label>
                             <input required id="nombreEncargado" name="nombreEncargado" type="text"
                                 placeholder="Nombres y apellidos del jefe">
-
+                            <div class="error"></div>
                         </div>
                         <div class="input-field input-control">
                             <label for="dni">DNI</label>
                             <input id="dni" type="text" name="dni" placeholder="Ingrese DNI">
-
+                            <div class="error"></div>
                         </div>
                         <div class="input-field input-control">
                             <label for="sede">SEDE</label>
@@ -67,7 +56,7 @@
                                 <option>Sede SIAM</option>
                                 <option>Sede DEMUNA</option>
                             </select>
-
+                            <div class="error"></div>
                         </div>
                         <div class="input-field input-control">
                             <label for="cargo">CARGO</label>
@@ -76,7 +65,7 @@
                                 <option>GERENTE</option>
                                 <option>SUB GERENTE</option>
                             </select>
-
+                            <div class="error"></div>
                         </div>
                         <div class="input-field input-control">
                             <label for="oficina">OFICINA</label>
@@ -105,13 +94,13 @@
                                 <option>GERENCIA DE ADMINISTRACION TRIBUTARIA</option>
                                 <option>GERENCIA DE ASESORIA JURIDICA</option>
                             </select>
-
+                            <div class="error"></div>
                         </div>
                         <div class="input-field input-control">
                             <label for="solicitante">SOLICITANTE</label>
                             <input required id="solicitante" name="solicitante" type="text"
                                 placeholder="NOMBRE DEL SOLICITANTE">
-
+                            <div class="error"></div>
                         </div>
                     </div>
                 </div>
@@ -129,26 +118,28 @@
                                 <option>SISTRAMITE</option>
                                 <option>SIGAL</option>
                             </select>
-
+                            <div class="error"></div>
                         </div>
                         <div class="input-field input-control">
                             <label for="codPatri">CODIGO PATRIMONIAL</label>
                             <input required id="codPatri" name="codPatri" type="text"
                                 placeholder="Ingrese Codigo del equipo">
-
+                            <div class="error"></div>
                         </div>
                         <div class="input-field input-control">
                             <label for="problematica">PROBLEMATICA</label>
                             <input required id="problematica" name="problematica" type="text"
                                 placeholder="Describa brevemente el problema">
-
+                            <div class="error"></div>
                         </div>
                         <div class="input-field input-control">
-                            <label for="fecha">FECHA DEL SERVICIO</label>
-                            <input required id="fecha" name="fecha" type="date" placeholder="Enter your issued date">
-
+                            <label hidden for="fecha">FECHA DEL SERVICIO</label>
+                            <input required id="fecha" name="fecha" type="hidden">
                         </div>
-
+                        <div class="input-field input-control">
+                            <label for="estado" hidden>ESTADO</label>
+                            <input id="estado" name="estado" value="PENDIENTE" type="hidden">
+                        </div>
                     </div>
                     <button type="submit" class="nextBtn" id="btnRegistrar">
                         <span class="btnText">submit</span>
@@ -162,6 +153,9 @@
 
     <script src="./js/registrar.js"></script>
     <script src="./js/mostrarRegistros.js"></script>
+
+
+
     <script>
         $(document).ready(function () {
             $('.basic-single').select2({
