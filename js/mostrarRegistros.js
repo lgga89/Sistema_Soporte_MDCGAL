@@ -33,7 +33,12 @@ function llenarTabla() {
       celdaCategoria = document.createElement("td"),
       celdaProblematica = document.createElement("td"),
       celdaFecha = document.createElement("td"),
-      celdaEstado = document.createElement("td");
+      celdaEstado = document.createElement("td"),
+      celdaModificar = document.createElement("td"),
+      enlaceModificar=document.createElement("<select>");
+                           
+
+enlaceModificar.href='registrar.hmtl';
 
     let nodoId = document.createTextNode(aid[i]),
       nodoEncar = document.createTextNode(aencar[i]),
@@ -46,7 +51,8 @@ function llenarTabla() {
       nodoCategoria = document.createTextNode(acategoria[i]),
       nodoProblematica = document.createTextNode(aproblematica[i]),
       nodoFecha = document.createTextNode(afecha[i]),
-      nodoEstado = document.createTextNode(aestado[i]);
+      nodoEstado = document.createTextNode(aestado[i]),
+      nodoModificar = document.createTextNode('Registrar');
 
     celdaId.appendChild(nodoId);
     celdaEncar.appendChild(nodoEncar);
@@ -60,6 +66,9 @@ function llenarTabla() {
     celdaProblematica.appendChild(nodoProblematica);
     celdaFecha.appendChild(nodoFecha);    
     celdaEstado.appendChild(nodoEstado);
+        
+    enlaceModificar.appendChild(nodoModificar);
+    celdaModificar.appendChild(enlaceModificar);
 
     fila.appendChild(celdaId);
     fila.appendChild(celdaEncar);
@@ -73,6 +82,7 @@ function llenarTabla() {
     fila.appendChild(celdaProblematica);
     fila.appendChild(celdaFecha);
     fila.appendChild(celdaEstado);
+    fila.appendChild(celdaModificar);
     tbody.appendChild(fila);
   }
 }

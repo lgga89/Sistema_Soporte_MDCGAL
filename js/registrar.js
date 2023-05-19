@@ -71,3 +71,7 @@ function registrar() {
 
   llenarTabla();
 }
+
+
+
+
