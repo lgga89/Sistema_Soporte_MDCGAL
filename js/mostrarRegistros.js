@@ -35,10 +35,10 @@ function llenarTabla() {
       celdaFecha = document.createElement("td"),
       celdaEstado = document.createElement("td"),
       celdaModificar = document.createElement("td"),
-      enlaceModificar=document.createElement("<select>");
+      enlaceModificar=document.createElement("a");
                            
 
-enlaceModificar.href='registrar.hmtl';
+enlaceModificar.href='registro.html';
 
     let nodoId = document.createTextNode(aid[i]),
       nodoEncar = document.createTextNode(aencar[i]),
@@ -52,7 +52,7 @@ enlaceModificar.href='registrar.hmtl';
       nodoProblematica = document.createTextNode(aproblematica[i]),
       nodoFecha = document.createTextNode(afecha[i]),
       nodoEstado = document.createTextNode(aestado[i]),
-      nodoModificar = document.createTextNode('Registrar');
+      nodoModificar = document.createTextNode('Modificar');
 
     celdaId.appendChild(nodoId);
     celdaEncar.appendChild(nodoEncar);
@@ -66,7 +66,7 @@ enlaceModificar.href='registrar.hmtl';
     celdaProblematica.appendChild(nodoProblematica);
     celdaFecha.appendChild(nodoFecha);    
     celdaEstado.appendChild(nodoEstado);
-        
+    
     enlaceModificar.appendChild(nodoModificar);
     celdaModificar.appendChild(enlaceModificar);
 

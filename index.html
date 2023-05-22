@@ -138,7 +138,11 @@
                         </div>
                         <div class="input-field input-control">
                             <label for="estado" hidden>ESTADO</label>
-                            <input id="estado" name="estado" value="PENDIENTE" type="hidden">
+                            <select id="estado" name="estado" hidden>
+                                <option selected>PENDIENTE </option>
+                                <option>PROCESO</option>
+                                <option>CULMINADO</option>
+                            </select>
                         </div>
                     </div>
                     <button type="submit" class="nextBtn" id="btnRegistrar">
