@@ -1,5 +1,5 @@
 if (localStorage.getItem("id_encargado") != null) {
-   let  aid = JSON.parse(localStorage.getItem("id")),
+   let  aid = JSON.parse(localStorage.getItem("id"));
        aestado = JSON.parse(localStorage.getItem("estado"));
   }
 
