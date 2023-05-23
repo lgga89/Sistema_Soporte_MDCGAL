@@ -26,6 +26,8 @@ if (localStorage.getItem("id_encargado") != null) {
   aestado = JSON.parse(localStorage.getItem("estado"));
 }
 
+////
+
 let elementoBtnRegistrar = document.querySelector("#btnRegistrar");
 elementoBtnRegistrar.addEventListener("click", registrar);
 
@@ -40,7 +42,7 @@ function registrar() {
     scodigo = document.querySelector("#codPatri").value,
     scategoria = document.querySelector("#categoria").value,
     sproblematica = document.querySelector("#problematica").value,
-     sfecha = document.querySelector("#fecha").value,
+    sfecha = document.querySelector("#fecha").value,
     sestado = document.querySelector("#estado").value;
 
   aid.push(sid);
@@ -71,7 +73,3 @@ function registrar() {
 
   llenarTabla();
 }
-
-
-
-

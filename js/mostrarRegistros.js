@@ -35,10 +35,11 @@ function llenarTabla() {
       celdaFecha = document.createElement("td"),
       celdaEstado = document.createElement("td"),
       celdaModificar = document.createElement("td"),
-      enlaceModificar=document.createElement("a");
-                           
+      enlaceModificar = document.createElement("a");
 
-enlaceModificar.href='registro.html';
+    celdaModificar.setAttribute("class", "btnModificar");
+    celdaModificar.setAttribute("id", i);
+    enlaceModificar.href = "modificar.html?id" + "=" + i;
 
     let nodoId = document.createTextNode(aid[i]),
       nodoEncar = document.createTextNode(aencar[i]),
@@ -52,7 +53,7 @@ enlaceModificar.href='registro.html';
       nodoProblematica = document.createTextNode(aproblematica[i]),
       nodoFecha = document.createTextNode(afecha[i]),
       nodoEstado = document.createTextNode(aestado[i]),
-      nodoModificar = document.createTextNode('Modificar');
+      nodoModificar = document.createTextNode("Modificar");
 
     celdaId.appendChild(nodoId);
     celdaEncar.appendChild(nodoEncar);
@@ -64,9 +65,9 @@ enlaceModificar.href='registro.html';
     celdaCodigo.appendChild(nodoCodigo);
     celdaCategoria.appendChild(nodoCategoria);
     celdaProblematica.appendChild(nodoProblematica);
-    celdaFecha.appendChild(nodoFecha);    
+    celdaFecha.appendChild(nodoFecha);
     celdaEstado.appendChild(nodoEstado);
-    
+
     enlaceModificar.appendChild(nodoModificar);
     celdaModificar.appendChild(enlaceModificar);
 

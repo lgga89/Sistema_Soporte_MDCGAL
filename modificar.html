@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Información MDCGAL </title>
+    <link rel="icon" type="image/png" href="//www.munialbarracin.gob.pe/CDN/svg_mdcgal/favicon/favicon.png">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+</head>
+
+<body class="cuerpo">
+    <nav class="logo_registro">
+        <img class="logoForm_dos" src="./img/encabezado_001.png" alt="LOGO MUNI">
+    </nav>
+    <h1 class="title_registro"> MODIFICAR - SOPORTE TECNICO MDCGAL</h1>
+    <form action="/" id="formu" autocomplete="off">
+        <div class="form first">
+            <div class="details personal">
+                <span class="title">DATOS PERSONALES</span>
+                <div class="fields">
+                    <div class="input-field  input-control">
+                        <label for="id">ID</label>
+                        <input id="id" name="id" type="text" placeholder="id">
+                        <div class="error"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="details ">
+                <span class="title">DESCRIPCION DEL PROBLEMA</span>
+                <div class="fields">
+                    <div class="input-field input-control">
+                        <label for="estado" hidden>ESTADO</label>
+                        <select id="estado" name="estado">
+                            <option selected>PENDIENTE </option>
+                            <option>PROCESO</option>
+                            <option>CULMINADO</option>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="nextBtn" id="btnModificar">
+                    <span class="btnText">GUARDAR</span>
+                    <i class="uil uil-navigator"></i>
+                </button>
+            </div>
+        </div>
+    </form>
+
+
+    <script src="./js/mostrarRegistros.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src=""></script>
+    <script src="./js/paginacion.js"></script>
+</body>
+<footer class="page_cake">
+    <p>©lgga 2023</p>
+</footer>
+
+</html>
