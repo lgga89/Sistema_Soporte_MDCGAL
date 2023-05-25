@@ -16,14 +16,81 @@
         <img class="logoForm_dos" src="./img/encabezado_001.png" alt="LOGO MUNI">
     </nav>
     <h1 class="title_registro"> MODIFICAR - SOPORTE TECNICO MDCGAL</h1>
-    <form action="/" id="formu" autocomplete="off">
+    <form action="/" id="form02" autocomplete="off">
         <div class="form first">
             <div class="details personal">
                 <span class="title">DATOS PERSONALES</span>
                 <div class="fields">
+
                     <div class="input-field  input-control">
                         <label for="id">ID</label>
                         <input id="id" name="id" type="text" placeholder="id">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-field input-control">
+                        <label for="nombreEncargado">NOMBRES DEL ENCARGADO DE TU AREA</label>
+                        <input id="nombreEncargado" name="nombreEncargado" type="text"
+                            placeholder="Nombres y apellidos del jefe">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-field input-control">
+                        <label for="dni">DNI</label>
+                        <input id="dni" type="text" name="dni" placeholder="Ingrese DNI">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-field input-control">
+                        <label for="sede">SEDE</label>
+                        <select id="sede" name="sede">
+                            <option disabled selected>Seleccione la Sede</option>
+                            <option>Sede Central</option>
+                            <option>Sede GIO</option>
+                            <option>Sede Palacio de la Juventud</option>
+                            <option>Sede SIAM</option>
+                            <option>Sede DEMUNA</option>
+                        </select>
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-field input-control">
+                        <label for="cargo">CARGO</label>
+                        <select id="cargo" name="cargo">
+                            <option disabled selected>CARGO</option>
+                            <option>GERENTE</option>
+                            <option>SUB GERENTE</option>
+                        </select>
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-field input-control">
+                        <label for="oficina">OFICINA</label>
+                        <select id="oficina" class="basic-single" name="oficina">
+                            <option selected>Seleccione la Oficina</option>
+                            <option>ALCALDIA</option>
+                            <option>CONSEJO MUNICIPAL</option>
+                            <option>GERENCIA DE SECRETARIA GENERAL E IMAGEN INSTITUCIONAL</option>
+                            <option>GERENCIA MUNICIPAL</option>
+                            <option>GERENCIA DE ADMINISTRACIÓN</option>
+                            <option>SUB GERENCIA DE LOGÍSTICA</option>
+                            <option>SUB GERENCIA DE TESORERÍA</option>
+                            <option>SUB GERENCIA DE RECURSOS HUMANOS</option>
+                            <option>GERENCIA DE PLANEAMIENTO Y PRESUPUESTO</option>
+                            <option>GERENCIA DE DESARROLLO ECONOMICO, SOCIAL Y SEGURIDAD</option>
+                            <option>SUB GERENCIA DE SEGURIDAD Y VIGILANCIA</option>
+                            <option>SUB GERENCIA DE PROMOCION DE DESARROLLO ECONOMICO Y COMERCIALIZACION</option>
+                            <option>GERENCIA DE DESARROLLO URBANO</option>
+                            <option>SUB GERENCIA DE TRANSPORTE Y SEGURIDAD VIAL</option>
+                            <option>GERENCIA DE EJECUCCION DE INVERSIONES</option>
+                            <option>SUB GERENCIA DE OBRAS</option>
+                            <option>SUB GERENCIA DE SUERVISION Y LIQUIDACION DE PROYECTO</option>
+                            <option>GERENCIA DE MANTENIMIENTO Y GESTION AMBIENTAL</option>
+                            <option>SUB GERENCIA DE GESTION AMBIENTAL</option>
+                            <option>SUB GERENCIA DE EQUIPO MECANICO</option>
+                            <option>GERENCIA DE ADMINISTRACION TRIBUTARIA</option>
+                            <option>GERENCIA DE ASESORIA JURIDICA</option>
+                        </select>
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-field input-control">
+                        <label for="solicitante">SOLICITANTE</label>
+                        <input id="solicitante" name="solicitante" type="text" placeholder="NOMBRE DEL SOLICITANTE">
                         <div class="error"></div>
                     </div>
                 </div>
@@ -31,6 +98,34 @@
             <div class="details ">
                 <span class="title">DESCRIPCION DEL PROBLEMA</span>
                 <div class="fields">
+                    <div class="input-field input-control">
+                        <label for="categoria">CATEGORIA</label>
+                        <select id="categoria" name="categoria">
+                            <option selected>Seleccione el problema</option>
+                            <option>IMPRESORA</option>
+                            <option>LA COMPUTADORA</option>
+                            <option>INTERNET</option>
+                            <option>CABLEADO DE RED</option>
+                            <option>SISTRAMITE</option>
+                            <option>SIGAL</option>
+                        </select>
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-field input-control">
+                        <label for="codPatri">CODIGO PATRIMONIAL</label>
+                        <input id="codPatri" name="codPatri" type="text" placeholder="Ingrese Codigo del equipo">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-field input-control">
+                        <label for="problematica">PROBLEMATICA</label>
+                        <input id="problematica" name="problematica" type="text"
+                            placeholder="Describa brevemente el problema">
+                        <div class="error"></div>
+                    </div>
+                    <div class="input-field input-control">
+                        <label hidden for="fecha">FECHA DEL SERVICIO</label>
+                        <input required id="fecha" name="fecha" type="hidden">
+                    </div>
                     <div class="input-field input-control">
                         <label for="estado" hidden>ESTADO</label>
                         <select id="estado" name="estado">
@@ -40,8 +135,8 @@
                         </select>
                     </div>
                 </div>
-                <button type="submit" class="nextBtn" id="btnModificar">
-                    <span class="btnText">GUARDAR</span>
+                <button type="submit" class="botton" id="btnModificar">
+                    <span>MODIFICAR</span>
                     <i class="uil uil-navigator"></i>
                 </button>
             </div>
