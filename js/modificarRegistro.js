@@ -1,4 +1,5 @@
 if (localStorage.getItem("id_encargado") != null) {
+<<<<<<< HEAD
   var aid = JSON.parse(localStorage.getItem("id_encargado")),
     aencar = JSON.parse(localStorage.getItem("nombre_encargado")),
     adni = JSON.parse(localStorage.getItem("dni_encargado")),
@@ -42,6 +43,21 @@ document.querySelector("#fecha").value = sfecha;
 document.querySelector("#estado").value = sestado;
 
 btnModificar.addEventListener("clic", modificar);
+=======
+   let  aid = JSON.parse(localStorage.getItem("id"));
+       aestado = JSON.parse(localStorage.getItem("estado"));
+  }
+
+  let id = getUrlVars()["id"],
+  nid=aid[id],
+  sestado =  aestado[id],
+  btnModificar = document.querySelector("#btnModificar");
+
+  document.querySelector("#id").value = nid;
+  document.querySelector("#estado").value = sestado;
+
+  btnModificar.addEventListener("clic",modificar);
+>>>>>>> 1823ac75d68d4a1aee17cf673c34daf794b83eb6
 
 function modificar() {
   var id = document.querySelector("#id").value,
@@ -57,6 +73,7 @@ function modificar() {
     sfecha = document.querySelector("#fecha").value,
     sestado = document.querySelector("#estado").value;
 
+<<<<<<< HEAD
   aid[id] = nid;
   aencar[id] = snombrEncar;
   adni[id] = sdni;
@@ -81,3 +98,15 @@ function getUrlVars() {
   );
   return vars;
 }
+=======
+
+
+function getUrlVars() {
+  var vars = {};
+  var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+      vars[key] = value;
+  });
+  return vars;
+}
+
+>>>>>>> 1823ac75d68d4a1aee17cf673c34daf794b83eb6

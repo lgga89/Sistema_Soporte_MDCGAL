@@ -6,10 +6,21 @@
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Información MDCGAL </title>
+    <title>REGISTRAR - ATENCION AL USUARIO - MDCGAL </title>
     <link rel="icon" type="image/png" href="//www.munialbarracin.gob.pe/CDN/svg_mdcgal/favicon/favicon.png">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
 
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
 
 </head>
 
@@ -20,7 +31,10 @@
     <h1 class="title_registro"> REGISTRO - SOPORTE TECNICO MDCGAL</h1>
 
     <div>
-        <table id="registro" class="customers">
+        <button type="button" class="btn btn-info m-1" onclick="abrirForm(0)">NUEVO</button>
+
+
+        <table id="tabla" class="customers table table-bordered">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -35,23 +49,26 @@
                     <th>PROBLEMATICA</th>
                     <th>FECHA</th>
                     <th>ESTADO</th>
-                    <th>ESTADO 02</th>
+                    <th>ACCION</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="dataUsuario">
 
             </tbody>
-
         </table>
+
+
     </div>
 
-
-    <script src="./js/mostrarRegistros.js"></script>
+    <script src="./js/registro.js"></script>
+    <script src="./js/listarRegostro.js"></script>
+    <script src="./js/eliminarRegistro.js"></script>
+    <script src="./js/paginacion.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src=""></script>
-    <script src="./js/paginacion.js"></script>
+
 </body>
 <footer class="page_cake">
     <p>©lgga 2023</p>
