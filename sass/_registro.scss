@@ -1,8 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
   min-height: 100%;
   position: relative;
 }
-.logo_registro {
+
+.logo {
   background-color: $color_fondo_Logo;
   width: 100%;
 }
@@ -13,22 +20,33 @@ html {
 }
 .cuerpo {
   background-color: $color_fondo__formulario_soporte;
+  max-width: 2000px;
+  margin: 0 auto;
 }
+.container__registro {
+  max-width: 2000px;
+  margin: 0 auto;
+  .customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 6px 6px 0 0;
 
-.customers {
-  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-  border-spacing: 0;
-  width: 100%;
-  border-radius: 6px 6px 0 0;
-  background-color: #fff;
-  td {
-    padding: 8px;
-    text-align: center;
-    th {
+    td {
       padding: 8px;
       text-align: center;
+      background-color: $color_fondo_blanco;
+      .cabecera {
+        padding: 8px;
+        text-align: center;
+      }
     }
   }
+}
+footer {
+  background-color: $color_fondo_Logo;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 .page_cake {
@@ -45,14 +63,19 @@ html {
   }
 }
 
-tr:nth-child(even) {
+.cabecera:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-tr:hover {
-  background: #e8f2fd;
+.cabecera:hover {
+  background: #e2e7e9;
   transition: all 0.1s ease-in-out;
 }
+
+.cabecera {
+  background: $color_fondo_Logo;
+}
+
 th:first-child {
   border-radius: 6px 0 0 0;
 }
@@ -65,48 +88,16 @@ th:only-child {
   border-radius: 6px 6px 0 0;
 }
 .customers th {
-  background-color: $color_emcabezadoTabla;
-  color: white;
+  color: rgb(255, 255, 255);
 }
 .dataTables_filter {
-  color: white;
+  color: rgb(49, 45, 45);
 }
 
-//----------- RESPONSIVE
-@media (min-width: 350px) {
-  .cuerpo {
-    display: flex;
-    flex-direction: column;
-    .logo_registro {
-      text-align: center;
-      .logoForm_dos {
-        width: 80%;
-      }
-    }
-  }
-}
-
-@media (min-width: 662px) {
-  .cuerpo {
-    display: flex;
-    flex-direction: column;
-    .logo_registro {
-      text-align: center;
-      .logoForm_dos {
-        width: 600px;
-      }
-    }
-  }
-}
-
-// las celdas de colos gris
-tr:nth-child(2n + 2) td {
-  background-color: $color_fondo;
-}
-
+/*
 //- tablas responsive-//
 
-/*responsive*/
+
 
 @media (max-width: 500px) {
   .customers {
@@ -137,5 +128,73 @@ tr:nth-child(2n + 2) td {
     padding-left: 15px;
     font-size: 15px;
     font-weight: bold;
+  }
+}
+*/
+
+@media screen and (max-width: 800px) {
+  html {
+    .cuerpo {
+      .logo {
+        background-color: $color_fondo_Logo;
+        width: 100%;
+        .logo__img {
+          width: 100%;
+        }
+      }
+      .title_registro {
+        margin: 20px 0;
+      }
+      footer {
+        width: 100%;
+      }
+    }
+  }
+
+  .cuerpo {
+    background-color: $color_fondo__formulario_soporte;
+    margin: 0 auto;
+    .container__registro {
+      width: 80%;
+      margin: 0 auto;
+    }
+    footer {
+      margin: 0 auto;
+    }
+  }
+
+  .customers {
+    border: 0px;
+    background-color: red;
+  }
+
+  .customers caption {
+    font-size: 22px;
+  }
+  .customers thead {
+    display: none;
+  }
+  .customers .cabecera {
+    margin-bottom: 8px;
+    border-bottom: 4px solid #ddd;
+    display: block;
+  }
+  .customers .cabecera,
+  .customers td {
+    font-size: 12px;
+  }
+  .customers td {
+    display: block;
+    border-bottom: 1px solid #ddd;
+    text-align: right;
+  }
+  .customers td:last-child {
+    border-bottom: 0px;
+  }
+  .customers td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    text-transform: uppercase;
+    float: left;
   }
 }

@@ -2,166 +2,207 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Información MDCGAL </title>
-    <link rel="icon" type="image/png" href="//www.munialbarracin.gob.pe/CDN/svg_mdcgal/favicon/favicon.png">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>ATENCION AL USUARIO - MDCGAL </title>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <link rel="icon" type="image/png" href="//www.munialbarracin.gob.pe/CDN/svg_mdcgal/favicon/favicon.png">
+
+    <!-- ////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+    <!-- jQuery library -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.33/dist/sweetalert2.all.min.js"></script>
 </head>
 
-<body class="cuerpo">
-    <nav class="logo_registro">
-        <img class="logoForm_dos" src="./img/encabezado_001.png" alt="LOGO MUNI">
+<body>
+    <nav class="logo">
+        <img src="./img/encabezado_001.png" alt="LOGO MUNI">
     </nav>
-    <h1 class="title_registro"> MODIFICAR - SOPORTE TECNICO MDCGAL</h1>
-    <form action="/" id="form02" autocomplete="off">
-        <div class="form first">
-            <div class="details personal">
-                <span class="title">DATOS PERSONALES</span>
-                <div class="fields">
-
-                    <div class="input-field  input-control">
-                        <label for="id">ID</label>
-                        <input id="id" name="id" type="text" placeholder="id">
-                        <div class="error"></div>
-                    </div>
-                    <div class="input-field input-control">
-                        <label for="nombreEncargado">NOMBRES DEL ENCARGADO DE TU AREA</label>
-                        <input id="nombreEncargado" name="nombreEncargado" type="text"
-                            placeholder="Nombres y apellidos del jefe">
-                        <div class="error"></div>
-                    </div>
-                    <div class="input-field input-control">
-                        <label for="dni">DNI</label>
-                        <input id="dni" type="text" name="dni" placeholder="Ingrese DNI">
-                        <div class="error"></div>
-                    </div>
-                    <div class="input-field input-control">
-                        <label for="sede">SEDE</label>
-                        <select id="sede" name="sede">
-                            <option disabled selected>Seleccione la Sede</option>
-                            <option>Sede Central</option>
-                            <option>Sede GIO</option>
-                            <option>Sede Palacio de la Juventud</option>
-                            <option>Sede SIAM</option>
-                            <option>Sede DEMUNA</option>
-                        </select>
-                        <div class="error"></div>
-                    </div>
-                    <div class="input-field input-control">
-                        <label for="cargo">CARGO</label>
-                        <select id="cargo" name="cargo">
-                            <option disabled selected>CARGO</option>
-                            <option>GERENTE</option>
-                            <option>SUB GERENTE</option>
-                        </select>
-                        <div class="error"></div>
-                    </div>
-                    <div class="input-field input-control">
-                        <label for="oficina">OFICINA</label>
-                        <select id="oficina" class="basic-single" name="oficina">
-                            <option selected>Seleccione la Oficina</option>
-                            <option>ALCALDIA</option>
-                            <option>CONSEJO MUNICIPAL</option>
-                            <option>GERENCIA DE SECRETARIA GENERAL E IMAGEN INSTITUCIONAL</option>
-                            <option>GERENCIA MUNICIPAL</option>
-                            <option>GERENCIA DE ADMINISTRACIÓN</option>
-                            <option>SUB GERENCIA DE LOGÍSTICA</option>
-                            <option>SUB GERENCIA DE TESORERÍA</option>
-                            <option>SUB GERENCIA DE RECURSOS HUMANOS</option>
-                            <option>GERENCIA DE PLANEAMIENTO Y PRESUPUESTO</option>
-                            <option>GERENCIA DE DESARROLLO ECONOMICO, SOCIAL Y SEGURIDAD</option>
-                            <option>SUB GERENCIA DE SEGURIDAD Y VIGILANCIA</option>
-                            <option>SUB GERENCIA DE PROMOCION DE DESARROLLO ECONOMICO Y COMERCIALIZACION</option>
-                            <option>GERENCIA DE DESARROLLO URBANO</option>
-                            <option>SUB GERENCIA DE TRANSPORTE Y SEGURIDAD VIAL</option>
-                            <option>GERENCIA DE EJECUCCION DE INVERSIONES</option>
-                            <option>SUB GERENCIA DE OBRAS</option>
-                            <option>SUB GERENCIA DE SUERVISION Y LIQUIDACION DE PROYECTO</option>
-                            <option>GERENCIA DE MANTENIMIENTO Y GESTION AMBIENTAL</option>
-                            <option>SUB GERENCIA DE GESTION AMBIENTAL</option>
-                            <option>SUB GERENCIA DE EQUIPO MECANICO</option>
-                            <option>GERENCIA DE ADMINISTRACION TRIBUTARIA</option>
-                            <option>GERENCIA DE ASESORIA JURIDICA</option>
-                        </select>
-                        <div class="error"></div>
-                    </div>
-                    <div class="input-field input-control">
-                        <label for="solicitante">SOLICITANTE</label>
-                        <input id="solicitante" name="solicitante" type="text" placeholder="NOMBRE DEL SOLICITANTE">
-                        <div class="error"></div>
+    <div class="container">
+        <h2>SOLICITUD DE ATENCION AL USUARIO</h2>
+        <form action="#">
+            <div class="form first">
+                <div class="details personal">
+                    <span class="title">DATOS PERSONALES</span>
+                    <div class="fields">
+                        <div class="input-field ">
+                            <label for="txtidUsuario">ID</label>
+                            <input id="txtidUsuario" name="idUsuario" type="text" value="0" readonly placeholder="id">
+                        </div>
+                        <div class="input-field">
+                            <label for="encar">NOMBRES DEL ENCARGADO DE TU AREA</label>
+                            <input id="encar" name="encar" type="text" placeholder="Nombres y apellidos del jefe">
+                        </div>
+                        <div class="input-field">
+                            <label for="dni">DNI</label>
+                            <input id="dni" type="text" name="dni" placeholder="Ingrese DNI">
+                        </div>
+                        <div class="input-field ">
+                            <label for="sede">SEDE</label>
+                            <select id="sede" name="sede">
+                                <option disabled selected>Seleccione la Sede</option>
+                                <option>Sede Central</option>
+                                <option>Sede GIO</option>
+                                <option>Sede Palacio de la Juventud</option>
+                                <option>Sede SIAM</option>
+                                <option>Sede DEMUNA</option>
+                            </select>
+                        </div>
+                        <div class="input-field ">
+                            <label for="cargo">CARGO</label>
+                            <select id="cargo" name="cargo">
+                                <option disabled selected>CARGO</option>
+                                <option>GERENTE</option>
+                                <option>SUB GERENTE</option>
+                            </select>
+                        </div>
+                        <div class="input-field ">
+                            <label for="oficina">OFICINA</label>
+                            <select id="oficina" class="basic-single" name="oficina">
+                                <option selected>Seleccione la Oficina</option>
+                                <option>ALCALDIA</option>
+                                <option>CONSEJO MUNICIPAL</option>
+                                <option>GERENCIA DE SECRETARIA GENERAL E IMAGEN INSTITUCIONAL</option>
+                                <option>GERENCIA MUNICIPAL</option>
+                                <option>GERENCIA DE ADMINISTRACIÓN</option>
+                                <option>SUB GERENCIA DE LOGÍSTICA</option>
+                                <option>SUB GERENCIA DE TESORERÍA</option>
+                                <option>SUB GERENCIA DE RECURSOS HUMANOS</option>
+                                <option>GERENCIA DE PLANEAMIENTO Y PRESUPUESTO</option>
+                                <option>GERENCIA DE DESARROLLO ECONOMICO, SOCIAL Y SEGURIDAD</option>
+                                <option>SUB GERENCIA DE SEGURIDAD Y VIGILANCIA</option>
+                                <option>SUB GERENCIA DE PROMOCION DE DESARROLLO ECONOMICO Y COMERCIALIZACION</option>
+                                <option>GERENCIA DE DESARROLLO URBANO</option>
+                                <option>SUB GERENCIA DE TRANSPORTE Y SEGURIDAD VIAL</option>
+                                <option>GERENCIA DE EJECUCCION DE INVERSIONES</option>
+                                <option>SUB GERENCIA DE OBRAS</option>
+                                <option>SUB GERENCIA DE SUERVISION Y LIQUIDACION DE PROYECTO</option>
+                                <option>GERENCIA DE MANTENIMIENTO Y GESTION AMBIENTAL</option>
+                                <option>SUB GERENCIA DE GESTION AMBIENTAL</option>
+                                <option>SUB GERENCIA DE EQUIPO MECANICO</option>
+                                <option>GERENCIA DE ADMINISTRACION TRIBUTARIA</option>
+                                <option>GERENCIA DE ASESORIA JURIDICA</option>
+                            </select>
+                        </div>
+                        <div class="input-field">
+                            <label for="solicitante">SOLICITANTE</label>
+                            <input id="solicitante" name="solicitante" type="text" placeholder="NOMBRE DEL SOLICITANTE">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="details ">
-                <span class="title">DESCRIPCION DEL PROBLEMA</span>
-                <div class="fields">
-                    <div class="input-field input-control">
-                        <label for="categoria">CATEGORIA</label>
-                        <select id="categoria" name="categoria">
-                            <option selected>Seleccione el problema</option>
-                            <option>IMPRESORA</option>
-                            <option>LA COMPUTADORA</option>
-                            <option>INTERNET</option>
-                            <option>CABLEADO DE RED</option>
-                            <option>SISTRAMITE</option>
-                            <option>SIGAL</option>
-                        </select>
-                        <div class="error"></div>
+                <div class="details ">
+                    <span class="title">DESCRIPCION DEL PROBLEMA</span>
+                    <div class="fields">
+                        <div class="input-field">
+                            <label for="categoria">CATEGORIA</label>
+                            <select id="categoria" name="categoria">
+                                <option selected>Seleccione el problema</option>
+                                <option>IMPRESORA</option>
+                                <option>LA COMPUTADORA</option>
+                                <option>INTERNET</option>
+                                <option>CABLEADO DE RED</option>
+                                <option>SISTRAMITE</option>
+                                <option>SIGAL</option>
+                            </select>
+
+                        </div>
+                        <div class="input-field ">
+                            <label for="codPatri">CODIGO PATRIMONIAL</label>
+                            <input id="codPatri" name="codPatri" type="text" placeholder="Ingrese Codigo del equipo">
+
+                        </div>
+                        <div class="input-field ">
+                            <label for="problematica">PROBLEMATICA</label>
+                            <input id="problematica" name="problematica" type="text"
+                                placeholder="Describa brevemente el problema">
+                        </div>
+                        <div class="input-field ">
+                            <label hidden for="fecha">FECHA DEL SERVICIO</label>
+                            <input type="date" hidden id="fecha" name="fecha">
+                        </div>
+                        <div class="input-field ">
+                            <label for="estado">ESTADO</label>
+                            <select id="estado" name="estado">
+                                <option selected>PENDIENTE </option>
+                                <option>PROCESO</option>
+                                <option>CULMINADO</option>
+                            </select>
+                        </div>
                     </div>
-                    <div class="input-field input-control">
-                        <label for="codPatri">CODIGO PATRIMONIAL</label>
-                        <input id="codPatri" name="codPatri" type="text" placeholder="Ingrese Codigo del equipo">
-                        <div class="error"></div>
-                    </div>
-                    <div class="input-field input-control">
-                        <label for="problematica">PROBLEMATICA</label>
-                        <input id="problematica" name="problematica" type="text"
-                            placeholder="Describa brevemente el problema">
-                        <div class="error"></div>
-                    </div>
-                    <div class="input-field input-control">
-                        <label hidden for="fecha">FECHA DEL SERVICIO</label>
-                        <input required id="fecha" name="fecha" type="hidden">
-                    </div>
-<<<<<<< HEAD
-                    <div class="input-field input-control">
-=======
-                    <div class="input-field input-control">S
->>>>>>> 1823ac75d68d4a1aee17cf673c34daf794b83eb6
-                        <label for="estado" hidden>ESTADO</label>
-                        <select id="estado" name="estado" hidden>
-                            <option selected>PENDIENTE </option>
-                            <option>PROCESO</option>
-                            <option>CULMINADO</option>
-                        </select>
-                    </div>
+                    <button type="button" class="btn btn-success" onclick="guardar()">
+                        <span class="btn-success">Guardar</span>
+                        <i class="uil uil-navigator"></i>
+                    </button>
+
+
                 </div>
-<<<<<<< HEAD
-                <button type="submit" class="botton" id="btnModificar">
-                    <span>MODIFICAR</span>
-=======
-                <button type="submit" class="nextBtn" id="btnRegistrar">
-                    <span class="btnText">submit</span>
->>>>>>> 1823ac75d68d4a1aee17cf673c34daf794b83eb6
-                    <i class="uil uil-navigator"></i>
-                </button>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
+
+    <div>
+        <button type="button" class="btn btn-info m-1" onclick="abrirForm(0)">NUEVO</button>
 
 
-    <script src="./js/mostrarRegistros.js"></script>
+        <table id="tabla" class="customers table table-bordered">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>ENCARGADO</th>
+                    <th>DNI</th>
+                    <th>SEDE</th>
+                    <th>CARGO</th>
+                    <th>OFICINA</th>
+                    <th>SOLICITANTE</th>
+                    <th>CODIGO</th>
+                    <th>CATEGORIA</th>
+                    <th>PROBLEMATICA</th>
+                    <th>FECHA</th>
+                    <th>ESTADO</th>
+                    <th>ACCION</th>
+                </tr>
+            </thead>
+            <tbody id="dataUsuario">
+
+            </tbody>
+        </table>
+
+
+    </div>
+    <script src="./js/indexForm.js"></script>
+    <script src="./js/registrar.js"></script>
+    <script src="./js/"></script>
+    <script src="./js/guardarForm.js"></script>
+    <script src="./js/validar.js" type="text/javascript"></script>
+    <script src="./js/paginacion.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src=""></script>
-    <script src="./js/paginacion.js"></script>
+
+
+
+    <script>
+        /*
+        $(document).ready(function () {
+            $('.basic-single').select2({
+                //theme: 'bootstrap4'
+            });
+        });*/
+    </script>
+
 </body>
-<footer class="page_cake">
-    <p>©lgga 2023</p>
-</footer>
 
 </html>

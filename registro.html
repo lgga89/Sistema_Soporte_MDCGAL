@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="css/main.css">
     <title>REGISTRAR - ATENCION AL USUARIO - MDCGAL </title>
     <link rel="icon" type="image/png" href="//www.munialbarracin.gob.pe/CDN/svg_mdcgal/favicon/favicon.png">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+    <!--<link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">-->
 
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+
+
+    <!--///////////////////////////////////////////////////////////////////////////////////////////////////////-->
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
 
@@ -19,24 +24,20 @@
 
     <!-- Popper JS -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-
-    <!-- Latest compiled JavaScript -->
-
 </head>
 
 <body class="cuerpo">
-    <nav class="logo_registro">
-        <img class="logoForm_dos" src="./img/encabezado_001.png" alt="LOGO MUNI">
+    <nav class="logo">
+        <img class="logo__img" src="./img/encabezado_001.png" alt="LOGO MUNI">
     </nav>
+
+
     <h1 class="title_registro"> REGISTRO - SOPORTE TECNICO MDCGAL</h1>
-
-    <div>
+    <div class="container__registro">
         <button type="button" class="btn btn-info m-1" onclick="abrirForm(0)">NUEVO</button>
-
-
-        <table id="tabla" class="customers table table-bordered">
+        <table id="tabla" class=" customers    table-bordered   ">
             <thead>
-                <tr>
+                <tr class="cabecera">
                     <th>ID</th>
                     <th>ENCARGADO</th>
                     <th>DNI</th>
@@ -60,14 +61,23 @@
 
     </div>
 
+
     <script src="./js/registro.js"></script>
     <script src="./js/listarRegostro.js"></script>
     <script src="./js/eliminarRegistro.js"></script>
     <script src="./js/paginacion.js"></script>
+
+    <!--
     <script src="https://code.jquery.com/jquery-3.4.1.js"
         integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
     <script src=""></script>
+-->
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+
 
 </body>
 <footer class="page_cake">
