@@ -99,9 +99,6 @@ th:only-child {
 }
 
 @media (max-width: 800px) {
-  html .cuerpo {
-    background: red;
-  }
   html .cuerpo .logo {
     background-color: #0098da;
     width: 100%;
