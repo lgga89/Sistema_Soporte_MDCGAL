@@ -7,6 +7,8 @@
 html {
   min-height: 100%;
   position: relative;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -20,12 +22,8 @@ html {
 }
 .cuerpo {
   background-color: $color_fondo__formulario_soporte;
-  max-width: 2000px;
-  margin: 0 auto;
 }
 .container__registro {
-  max-width: 2000px;
-  margin: 0 auto;
   .customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-spacing: 0;
@@ -45,8 +43,6 @@ html {
 }
 footer {
   background-color: $color_fondo_Logo;
-  max-width: 2000px;
-  margin: 0 auto;
 }
 
 .page_cake {
@@ -99,15 +95,18 @@ th:only-child {
 @media (max-width: 800px) {
   html {
     .cuerpo {
+      background: red;
       .logo {
         background-color: $color_fondo_Logo;
         width: 100%;
         .logo__img {
           width: 100%;
+          padding: 15px;
         }
       }
       .title_registro {
         margin: 20px 0;
+        text-align: center;
       }
       footer {
         width: 100%;
@@ -116,6 +115,7 @@ th:only-child {
   }
 
   //cabecera
+
   .customers {
     border: 0px;
     width: 100%;
@@ -155,18 +155,4 @@ th:only-child {
     border-bottom: 1px solid #ddd;
     text-align: right;
   }
-
-  /*.customers td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    text-transform: uppercase;
-    float: left;
-    position: absolute;
-    left: 0;
-    width: 50%;
-    padding-left: 15px;
-    font-size: 15px;
-    font-weight: bold;
-    text-align: left;
-  }*/
 }

@@ -9,6 +9,8 @@
 html {
   min-height: 100%;
   position: relative;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 .logo {
@@ -23,13 +25,6 @@ html {
 
 .cuerpo {
   background-color: #eaeaea;
-  max-width: 2000px;
-  margin: 0 auto;
-}
-
-.container__registro {
-  max-width: 2000px;
-  margin: 0 auto;
 }
 
 .container__registro .customers {
@@ -52,8 +47,6 @@ html {
 
 footer {
   background-color: #0098da;
-  max-width: 2000px;
-  margin: 0 auto;
 }
 
 .page_cake {
@@ -106,15 +99,20 @@ th:only-child {
 }
 
 @media (max-width: 800px) {
+  html .cuerpo {
+    background: red;
+  }
   html .cuerpo .logo {
     background-color: #0098da;
     width: 100%;
   }
   html .cuerpo .logo .logo__img {
     width: 100%;
+    padding: 15px;
   }
   html .cuerpo .title_registro {
     margin: 20px 0;
+    text-align: center;
   }
   html .cuerpo footer {
     width: 100%;
@@ -156,19 +154,6 @@ th:only-child {
     border-bottom: 1px solid #ddd;
     text-align: right;
   }
-  /*.customers td::before {
-    content: attr(data-label);
-    font-weight: bold;
-    text-transform: uppercase;
-    float: left;
-    position: absolute;
-    left: 0;
-    width: 50%;
-    padding-left: 15px;
-    font-size: 15px;
-    font-weight: bold;
-    text-align: left;
-  }*/
 }
 
 .select2-container--default
