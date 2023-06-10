@@ -99,24 +99,30 @@ th:only-child {
 }
 
 @media (max-width: 800px) {
-  html .cuerpo .logo {
+  html .cuerpo main {
+    margin: auto;
+    padding: auto;
+  }
+  html .cuerpo main .logo {
     background-color: #0098da;
     width: 100%;
   }
-  html .cuerpo .logo .logo__img {
+  html .cuerpo main .logo .logo__img {
     width: 100%;
     padding: 15px;
   }
-  html .cuerpo .title_registro {
+  html .cuerpo main .title_registro {
     margin: 20px 0;
     text-align: center;
+  }
+  html .cuerpo main .container__registro {
+    width: 90%;
   }
   html .cuerpo footer {
     width: 100%;
   }
   .customers {
     border: 0px;
-    width: 100%;
   }
   .customers thead {
     display: none;

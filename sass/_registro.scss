@@ -95,17 +95,24 @@ th:only-child {
 @media (max-width: 800px) {
   html {
     .cuerpo {
-      .logo {
-        background-color: $color_fondo_Logo;
-        width: 100%;
-        .logo__img {
+      main {
+        margin: auto;
+        padding: auto;
+        .logo {
+          background-color: $color_fondo_Logo;
           width: 100%;
-          padding: 15px;
+          .logo__img {
+            width: 100%;
+            padding: 15px;
+          }
         }
-      }
-      .title_registro {
-        margin: 20px 0;
-        text-align: center;
+        .title_registro {
+          margin: 20px 0;
+          text-align: center;
+        }
+        .container__registro {
+          width: 90%;
+        }
       }
       footer {
         width: 100%;
@@ -113,11 +120,8 @@ th:only-child {
     }
   }
 
-  //cabecera
-
   .customers {
     border: 0px;
-    width: 100%;
 
     thead {
       display: none;
