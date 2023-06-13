@@ -13,7 +13,7 @@ function listar() {
       dataFila += "<td data-titulo='ID'>" + varUsuario.idUsuario + "</td>";
       dataFila +=
         "<td data-titulo='ENCARGADO DEL AREA'>" + varUsuario.encar + "</td>";
-      dataFila += "<td data-titulo='DNI'>" + varUsuario.dni + "</td>";
+      dataFila += "<td data-titulo='DNI'>" + varUsuario.dni + "</td>";   
       dataFila += "<td data-titulo='SEDE'>" + varUsuario.sede + "</td>";
       dataFila += "<td data-titulo='CARGO'>" + varUsuario.cargo + "</td>";
       dataFila += "<td data-titulo='OFICINA'>" + varUsuario.oficina + "</td>";
@@ -26,13 +26,14 @@ function listar() {
       dataFila +=
         "<td data-titulo='PROBLEMATICA'>" + varUsuario.problematica + "</td>";
       dataFila += "<td data-titulo='FECHA'>" + varUsuario.fecha + "</td>";
-      dataFila += "<td data-titulo='ESTADO'>" + varUsuario.estado + "</td>";
+      dataFila += "<td data-titulo='ESTADO'> <select><option>" + varUsuario.estado + "</select></td>";
 
       dataFila +=
         "<td>" +
-        "<button type='button' class='btn btn-warning' onclick='abrirForm(" +
+        "<button type='button' class='hero__cta btn btn-warning' onclick='abrirForm(" +
         varUsuario.idUsuario +
         ")'>EDITAR</button>" +
+      
         "<button type='button' class='btn btn-info' onclick='eliminarItem(" +
         varUsuario.idUsuario +
         ")'>ELIMINAR</button>" +
